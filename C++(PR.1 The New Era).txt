@@ -1,0 +1,102 @@
+/*Q.1 Write a Program to create a class to read and add two distances.*/
+#include<iostream>
+using namespace std;
+class Distances{
+	public:
+	int feet,inch;
+	
+	void input()
+	{
+		cout<<"Enter Feet and Inch: ";
+		cin>>feet>>inch;
+	}
+	void add(Distances d1,Distances d2)
+	{
+		feet=d1.feet+d2.feet;
+		inch=d1.inch+d2.inch;
+		if (inch >= 12) 
+		{
+            feet =feet+inch/12;
+            inch =inch%12;
+        }
+	}
+	
+	void output()
+	{
+		cout<<"Total :"<<feet<<" Feet "<<inch<<" Inch";
+	}
+	
+};
+ int main()
+ {
+ 	Distances input1,input2,total;
+ 	input1.input();
+ 	input2.input();
+ 	total.add(input1,input2);
+ 	total.output();
+ }
+/*Q.2 Write a Program to read time in seconds and convert it into time in (HH:MM:SS) format.*/
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int seconds;
+    cout << "Enter seconds: ";
+    cin >> seconds;
+
+    int hours, minutes;
+    hours = seconds / 3600;  
+    seconds =seconds % 3600;
+    minutes = seconds / 60;  
+    seconds =seconds % 60;
+
+    cout << "Output: " << hours << ":" << minutes << ":" << seconds << endl;
+
+    return 0;
+}
+
+/*Q.3 WAP to create a class which Read and Print House details along with Room details.*/
+
+#include<iostream>
+using namespace std;
+class Housedtails{
+		int houseNum,room,inch,size;
+		string housename,color;
+	public :
+		void setdata()
+		{
+			cout<<"\n--------------------\n";
+			cout<<"Enter your HouseName : ";
+			cin>>housename;
+			cout<<"Enter your HouseNo. : ";
+			cin>>houseNum;
+			cout<<"Enter House inch : ";
+			cin>>inch;
+			cout <<"Enter the Number of Rooms: ";
+        	cin >>room;
+			cout<<"Enter Room size : ";
+			cin>>size;
+			cout<<"Enter House color: ";
+			cin>>color;
+			cout<<"\n--------------------\n";
+		}
+		void getdata()
+		{
+			cout<<"\n--------------------\n";
+			cout<<"House Name : "<<housename<<endl;
+			cout<<"House No. : "<<houseNum<<endl;
+			cout<<"House inch : "<<inch<<endl;
+			cout<<"Total Rooms: "<<room<<endl;
+			cout<<"Room Size : "<<size<<endl;
+			cout<<"Room Color : "<<color<<endl;
+			cout<<"\n--------------------\n";
+		}
+};
+int main()
+{
+	Housedtails d1;
+	d1.setdata();
+	d1.getdata();	
+}
+
