@@ -1,3 +1,5 @@
+/*Q.1 Write a Program to get and display N numbers of Hotels and static information using 
+Encapsulation with an array of objects member by including the below-mentioned attributes:*/
 #include<iostream>
 using namespace std;
 class Hoteldetails{
