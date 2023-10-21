@@ -1,4 +1,5 @@
-//1
+/*Q.1 Write a Program to create Student Record System for 5 students using Encapsulation.
+Consider the below-mentioned attributes in the Student class:*/
 #include<iostream>
 using namespace std;
 class Student{
@@ -55,7 +56,8 @@ int main()
 
 }
 
-//2
+/*Q.2 Write a Program to create a Customer Record System for 5 customers using Encapsulation. 
+Consider the below-mentioned attributes in the Customer structure:*/
 #include<iostream>
 using namespace std;
 class Customer{
