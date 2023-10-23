@@ -1,0 +1,82 @@
+//Q.1
+#include<iostream>
+using namespace std;
+
+ class Train{
+  private :
+  int trainNum;
+  string trainName;
+  string source;
+  string Destination;
+  string trainTime;
+
+public :
+void setdata(){
+cout<<"----Enter train Details----\n";
+cout<<"Enter Train Number : ";
+cin>>trainNum;
+cout<<"Enter Train Name : ";
+cin>>trainName;
+cout<<"Enter Train Source : ";
+cin>>source;
+cout<<"Enter Train Destination : ";
+cin>>Destination;
+cout<<"Enter Train Time : ";
+cin>>trainTime;
+}
+void header()
+{
+cout<<"==========================================================================\n";
+cout<<"TrainNum"<<"\t"<<"TrainName"<<"\t"<<"TrainSource"<<"\t"<<"TrainDesti"<<"\t"<<"TrainTime"<<endl;
+cout<<"===========================================================================\n";
+}
+void getdata()
+{
+cout<<"--------------------------------------------------------------------------\n";
+cout<<trainNum<<"\t"<<"\t"<<trainName<<"\t"<<"\t"<<source<<"\t"<<"\t"<<Destination<<"\t"<<"\t"<<trainTime<<endl;
+cout<<"--------------------------------------------------------------------------\n";
+}
+int Sreachdata(int n)
+{
+if(trainNum == n)
+{
+cout<<"Train Number : "<<trainNum<<endl;
+cout<<"Train Name : "<<trainName<<endl;
+cout<<"Train Source : "<<source<<endl;
+cout<<"Train Destination :"<<Destination<<endl;
+cout<<"Train Time : "<<trainTime<<endl;
+return 0;
+
+}
+else {
+//cout<<"Data not Found!!!";
+return 1;
+}
+}
+ };
+int main()
+{
+Train t1[3];
+int n ,check;
+
+ for(int i=0;i<3;i++)
+ {
+  t1[i].setdata();
+ }
+ 
+ t1[0].header();
+ for(int i=0;i<3;i++)
+ {
+  t1[i].getdata();
+ }
+cout<<"Search Train number : ";
+cin>>n;
+
+for(int i=0;i<n;i++)
+ {
+  t1[i].Sreachdata(n);
+ }
+if(check==1){
+cout<<"Data is not Found!!!"<<endl;
+}
+}
