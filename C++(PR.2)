@@ -1,4 +1,4 @@
-//Q.1
+//Q.1 Write a Program to make Railway Reservation System.
 #include<iostream>
 using namespace std;
 
@@ -79,4 +79,92 @@ for(int i=0;i<n;i++)
 if(check==1){
 cout<<"Data is not Found!!!"<<endl;
 }
+}
+
+
+//Q.2 Write a Program to make Supermarket Billing System
+#include<iostream>
+using namespace std;
+class bill{
+	public :
+	int  billNumber;
+	string ItemName;
+	int	Quantity;
+	int	Price;
+	float Discount;
+	
+	string email;
+	int pwd;
+	string c_email;
+	int c_pwd;
+	
+	void setData()
+	{
+		cout<<"Enter Bill Number : ";
+		cin>>billNumber;
+		cout<<"Enter Item Name : ";
+		cin>>ItemName;
+		cout<<"Enter Item Quantity : ";
+		cin>>Quantity;
+		cout<<"Enter Item Discount : ";
+		cin>>Discount;
+	}
+			void header()
+		{
+		cout<<"==================================================\n";
+		cout<<"  BillNum"<<"    ItemName"<<"    Quantity"<<"    Discount"<<endl;
+		cout<<"===================================================\n";
+		}
+	void getData()
+	{
+		cout<<"---------------------------------------------------\n";
+		cout<<"\t"<<billNumber<<"\t"<<  ItemName<<"\t"<<"\t"<<  Quantity<<"\t"<<   Discount<<"%"<<endl;	
+		cout<<"----------------------------------------------------\n";
+	}
+	
+};
+int main()
+{
+	bill b1;
+	b1.email="ishita@gmail.com";
+	b1.pwd=12345;
+	
+	int n;
+	cout<<"---Supermarket Billing Details ---\n";
+	cout<<"Enter Numbers of Bills  : ";
+	cin>>n;
+	
+	bill b2[n];
+	for(int i=0;i<n;i++)
+	{
+		b2[i].setData();
+	}
+	b2[0].header();
+	for(int i=0;i<n;i++)
+	{
+		b2[i].getData();
+	}
+	
+	cout<<"Enter Email : ";
+	cin>>b1.c_email;
+	cout<<"Enter Password : ";
+	cin>>b1.c_pwd;
+	
+	int n1;
+	if(b1.pwd==b1.c_pwd && b1.email==b1.c_email)
+	{
+		cout<<"Enter Serching Item Number : ";
+		cin>>n1;
+			for(int i=0;i<n;i++)
+			{
+				if(n1==b2[i].billNumber)
+				{
+					b2[i].getData();
+				}
+			}
+			}
+				else
+				{
+					cout<<"Invalis login!!!";
+				}
 }
