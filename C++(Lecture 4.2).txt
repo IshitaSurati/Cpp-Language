@@ -1,0 +1,55 @@
+/*Q.1 Write a Program to print the rate of interest of different banks
+ using hierarchical inheritance:*/
+#include<iostream>
+using namespace std;
+	class RBI{
+		protected :
+		double rate1,rate2,rate3;
+	};
+	class SBI : public RBI{
+		public :
+		void setdata(){
+		 cout<<"Enter rate of SBI :";
+		 cin>>rate1;
+		}
+		
+		void getROI(){
+			cout << "Rate of Interest (SBI): " <<rate1<< "%" <<endl;
+		}
+	};
+	
+	class BOB : public RBI{
+		public :
+		void setdata(){
+		 cout<<"Enter rate of BOB :";
+		 cin>>rate2;
+		}
+		void getROI(){
+			cout << "Rate of Interest (BOB): " <<rate2<< "%" <<endl;
+		}
+	};
+	class ICICI : public RBI{
+		public:
+		void setdata(){
+		 cout<<"Enter rate of ICICI :";
+		 cin>>rate3;
+	}
+		 void getROI(){
+			cout << "Rate of Interest (ICICI): " <<rate3<< "%" <<endl;
+		}
+	};
+int main()
+{
+	SBI s1;
+	BOB b1;
+	ICICI i1;
+	
+	s1.setdata();
+	b1.setdata();
+	i1.setdata();
+	
+	s1.getROI();
+	b1.getROI();
+	i1.getROI();
+	return 0;
+}
