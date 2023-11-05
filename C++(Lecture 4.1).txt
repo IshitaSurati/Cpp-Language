@@ -32,7 +32,7 @@ int main()
     n.setData(num1, num2, num3);
 
     int sumOfCubes = n.getData();
-    cout << "Sum of the cubes of the three numbers: " << sumOfCubes << std::endl;
+    cout << "Sum of the cubes of the three numbers: " << sumOfCubes << endl;
 }
 
 /*Q.2 Write a Program to convert a given degree Celsius temperature into Fahrenheit and convert that 
