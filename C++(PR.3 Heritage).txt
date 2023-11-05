@@ -62,3 +62,39 @@ int main ()
 	cout <<"Area of rectangle is: "<< rectangle.area() << endl;
 	cout <<"Area of triangle is: "<< triangle.area() << endl;
 }
+
+/*Q.2 Write a Program to demonstrate an example of hierarchical inheritance to get the square and cube of a number.*/
+#include<iostream>
+using namespace std;
+class NUM{
+	protected :
+		int num;
+		public :
+			void setData(int num){
+			 	this->num=num;
+			}
+};
+class Square : public NUM{
+	public:
+		int getDataS(){
+				return num*num;
+		}
+};
+class Cube : public NUM{
+	public :
+		int getDataC(){
+			return num*num*num;
+		}
+};
+int main(){
+	Square s;
+	Cube c;
+	int n;
+	cout<<"Enter any Number :";
+	cin>>n;
+	
+	s.setData(n);
+	c.setData(n);
+	cout<<"square : "<<s.getDataS()<<endl;
+	cout<<"Cube : "<<c.getDataC()<<endl;
+}
