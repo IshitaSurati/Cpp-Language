@@ -1,0 +1,29 @@
+//Q.1
+#include<iostream>
+using namespace std;
+class Arithmetic{
+      private :
+              int a=4,b=2;
+      public :
+             void operaion(){
+                    cout<<"A/B : "<<a/b<<endl;
+             }
+             void operaion(int a,int b,int c){
+                  cout<<"A-B-C : "<<a-b-c<<endl;
+             }
+             void operaion(int a,int b,int c,int d){
+                  cout<<"A*B*C*d : "<<a*b*c*d<<endl;
+             }
+             void operaion(int a,int b,int c,int d,int e){
+                  cout<<"A+B+C+D : "<<a+b+c+d<<endl;
+             }
+             
+};
+int main(){
+    Arithmetic a1;
+    
+    a1.operaion();
+    a1.operaion(1,4,1);
+    a1.operaion(1,2,4,5);
+    a1.operaion(10,20,30,40,50);
+}
