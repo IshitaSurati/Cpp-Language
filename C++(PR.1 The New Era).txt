@@ -48,21 +48,45 @@ int main() {
 #include <iostream>
 using namespace std;
 
-int main() 
-{
-    int seconds;
-    cout << "Enter seconds: ";
+class TimeConverter {
+	private:
+	    int hours;
+	    int minutes;
+	    int seconds;
+	
+	public:
+	    void convertTime(int totalSeconds) {
+	        hours = totalSeconds / 3600;
+	        totalSeconds %= 3600;
+	        minutes = totalSeconds / 60;
+	        seconds = totalSeconds % 60;
+	    }
+	
+	    void getData() {
+	        cout << "Time in (HH:MM:SS) format: ";
+	        if (hours < 10) {
+	            cout << "0";
+	        }
+	        cout << hours << ":";
+	        if (minutes < 10) {
+	            cout << "0";
+	        }
+	        cout << minutes << ":";
+	        if (seconds < 10) {
+	            cout << "0";
+	        }
+	        cout << seconds << endl;
+	    }
+};
+
+int main() {
+    TimeConverter time;
+	int seconds;
+    cout << "Enter time in seconds: ";
     cin >> seconds;
 
-    int hours, minutes;
-    hours = seconds / 3600;  
-    seconds =seconds % 3600;
-    minutes = seconds / 60;  
-    seconds =seconds % 60;
-
-    cout << "Output: " << hours << ":" << minutes << ":" << seconds << endl;
-
-    return 0;
+    time.convertTime(seconds);
+    time.getData();
 }
 
 /*Q.3 WAP to create a class which Read and Print House details along with Room details.*/
