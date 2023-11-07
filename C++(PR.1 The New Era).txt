@@ -8,11 +8,6 @@ class Distance {
 	    int inches;
 	
 	public:
-	    Distance() {
-	        feet = 0;
-	        inches = 0;
-	    }
-	
 	    void setData() {
 	        cout << "Enter feet: ";
 	        cin >> feet;
