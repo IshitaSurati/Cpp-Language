@@ -1,40 +1,54 @@
 /*Q.1 Write a Program to create a class to read and add two distances.*/
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Distances{
+
+class Distance {
+	private:
+	    int feet;
+	    int inches;
+	
 	public:
-	int feet,inch;
+	    Distance() {
+	        feet = 0;
+	        inches = 0;
+	    }
 	
-	void input()
-	{
-		cout<<"Enter Feet and Inch: ";
-		cin>>feet>>inch;
-	}
-	void add(Distances d1,Distances d2)
-	{
-		feet=d1.feet+d2.feet;
-		inch=d1.inch+d2.inch;
-		if (inch >= 12) 
-		{
-            feet =feet+inch/12;
-            inch =inch%12;
-        }
-	}
+	    void setData() {
+	        cout << "Enter feet: ";
+	        cin >> feet;
+	        cout << "Enter inches: ";
+	        cin >> inches;
+	    }
 	
-	void output()
-	{
-		cout<<"Total :"<<feet<<" Feet "<<inch<<" Inch";
-	}
+	    void addDistances(Distance d1, Distance d2) {
+	        feet = d1.feet + d2.feet;
+	        inches = d1.inches + d2.inches;
 	
-};
- int main()
- {
- 	Distances input1,input2,total;
- 	input1.input();
- 	input2.input();
- 	total.add(input1,input2);
- 	total.output();
- }
+	        if (inches >= 12) {
+	            feet += inches / 12;
+	            inches %= 12;
+	        }
+	    }
+	
+	    void getData() {
+	        cout << "Total distance: " << feet << " feet " << inches << " inches" <<endl;
+	    }
+	};
+
+int main() {
+    Distance distance1, distance2, result;
+
+    cout << "Enter the first distance:" <<endl;
+    distance1.setData();
+
+    cout << "Enter the second distance:" <<endl;
+    distance2.setData();
+
+    result.addDistances(distance1, distance2);
+
+    result.getData();
+}
+
 /*Q.2 Write a Program to read time in seconds and convert it into time in (HH:MM:SS) format.*/
 #include <iostream>
 using namespace std;
