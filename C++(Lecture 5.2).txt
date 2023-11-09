@@ -67,10 +67,10 @@ int main(){
 	n1.setData("N1");
 	n2.setData("N2");
 	if(n1==n2){
-		cout<<"N1 and N2 is equal value!!!!";
+		cout<<"N1 and N2 is equal values!!!!";
 	}
 	else{
-		cout<<"N1 and N2 is not equal value!!!!";
+		cout<<"N1 and N2 is not equal values!!!!";
 	}
 	
 	cout<<"\n=======================\n";
