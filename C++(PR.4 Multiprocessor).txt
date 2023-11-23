@@ -96,15 +96,21 @@ int main() {
     input2.setKm();
     input2.setMeter();
 
+    cout<<"-------------------\n";
     cout << "Input 1: " <<endl;
     input1.getData();
+    cout<<"-------------------\n";
 
+    cout<<"-------------------\n";
     cout << "Input 2: " <<endl;
     input2.getData();
+    cout<<"-------------------\n";
 
-    Distance totalDistance = input1 + input2;
+    Distance total = input1 + input2;
 
+    cout<<"\n-------------------\n";
     cout << "Output: " <<endl;
-    totalDistance.getData();
+    total.getData();
+    cout<<"-------------------\n";
 
 }
