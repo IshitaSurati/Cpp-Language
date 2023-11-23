@@ -50,6 +50,7 @@ int main(){
 
 /*Q.2 Write a Program to add two distances using binary plus (+) operator overloading.
 */
+
 #include <iostream>
 using namespace std;
 
@@ -61,12 +62,14 @@ private:
 
 public:
     
-    void setKm(int km) {
-        this->km = km;
+    void setKm() {
+        cout<<"Enter Km : ";
+        cin>>km;
     }
 
-    void setMeter(int meter) {
-        this->meter = meter;
+    void setMeter() {
+        cout<<"Enter meter : ";
+        cin>>meter;
     }
 
     Distance operator+(Distance input2) {
@@ -78,7 +81,7 @@ public:
     }
 
   
-    void display() {
+    void getData() {
        cout << "Km: " << km << ", Meter: " << meter <<endl;
     }
 };
@@ -86,22 +89,22 @@ public:
 int main() {
   
     Distance input1;
-    input1.setKm(3);
-    input1.setMeter(1020);
+    input1.setKm();
+    input1.setMeter();
 
     Distance input2;
-    input2.setKm(2);
-    input2.setMeter(2050);
+    input2.setKm();
+    input2.setMeter();
 
-    cout << "Input 1:" <<endl;
-    input1.display();
+    cout << "Input 1: " <<endl;
+    input1.getData();
 
-    cout << "\nInput 2:" <<endl;
-    input2.display();
+    cout << "Input 2: " <<endl;
+    input2.getData();
 
     Distance totalDistance = input1 + input2;
 
-    cout << "\nOutput:" <<endl;
-    totalDistance.display();
+    cout << "Output: " <<endl;
+    totalDistance.getData();
 
 }
