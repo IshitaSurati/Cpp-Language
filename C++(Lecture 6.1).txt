@@ -1,3 +1,17 @@
+/*Q.1 Write a Program to abstract some attributes of class Admin to prevent them to be inherited by its child classes.
+- Class Admin -> Class Manager
+- Class Manager -> Class Employee
+- Class Admin has the following members:
+company_name
+manager_salary
+employee_salary
+total_staff
+total_annual_revenue
+can_terminate
+- use all attributes accessibility in the parent class and child class properly.
+- override a method myAccess() in both child classes to display all parent class members' values accordingly.
+*/
+
 #include <iostream>
 using namespace std;
 
