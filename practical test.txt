@@ -1,0 +1,228 @@
+//1
+#include<iostream>
+using namespace std;
+class Bank{
+	private :
+		int AC_Number; 
+		string AC_Name; 
+		float AC_Type;
+		string AC_Branch; 
+		int AC_Balance;
+		
+	public :
+		void display(){
+			cout<<"Enter A/C_Number : ";
+			cin>>AC_Number;
+			cout<<"Enter A/C_Name : ";
+			cin>>AC_Name;
+			cout<<"Enter A/C_Type : ";
+			cin>>AC_Type;
+			cout<<"Enter A/C_Branch : ";
+			cin>>AC_Branch;
+			cout<<"Enter A/C_Balance : ";
+			cin>>AC_Balance;
+		}
+		
+		void output(){
+			cout<<"Enter A/C_Number : "<<AC_Number<<endl;
+			cout<<"Enter A/C_Name : "<<AC_Name<<endl;
+			cout<<"Enter A/C_Type : "<<AC_Type<<endl;;
+			cout<<"Enter A/C_Branch : "<<AC_Branch<<endl;
+			cout<<"Enter A/C_Balance : "<<AC_Balance<<endl;
+		}
+		int serchdata(int n);
+		if(num==n){
+			cout<<"Enter A/C_Number : "<<AC_Number<<endl;
+			cout<<"Enter A/C_Name : "<<AC_Name<<endl;
+			cout<<"Enter A/C_Type : "<<AC_Type<<endl;;
+			cout<<"Enter A/C_Branch : "<<AC_Branch<<endl;
+			cout<<"Enter A/C_Balance : "<<AC_Balance<<endl;
+		}
+		else{
+			cout<<"DATA NOT FOUND!!";
+			return 1;
+		}
+};
+int main(){
+	
+	Bank b1[5];
+	int n,check;
+	
+	for(int i=0;i<5;i++){
+		b1[i].display();
+	}
+	b1[i].display();
+	for(int i=0;i<5;i++){
+		b1[i].output();
+	}
+	cout<<"Enter Serch Data :";
+	cin>>n;
+	
+	for(int i=0;i<n;i++){
+		b1.serchdata(n);
+	}
+if(check==1){
+	cout<<"Data not found!!!";
+}
+}
+
+//2
+#include<iostream>
+using namespace std;
+class div{
+	
+	private :
+	int a,b;
+	char error[100]="Not divaid by ZERO !!";
+	
+	public :
+		
+	void division(){
+	cout<<"Enter A : ";
+	cin>>a;
+	cout<<"Enter B : ";
+	cin>>b;
+	
+	if(b==0){
+		throw error;
+	}
+	else{ 
+		throw a/b;
+	}
+	}
+};
+int main(){
+	div d;
+	
+	try{
+		d.division();
+	}
+	catch(char e[]){
+		cout<<endl<<e<<endl;
+	}
+	catch(int e){
+		cout<<endl<<e<<endl;
+	}
+}
+
+//3
+#include<iostream>
+using namespace std;
+
+class A{
+	public :
+		virtual void displayA(){
+		 	cout<<"Class A ";
+		 }
+};
+class B:virtual public A {
+	public :
+		 void displayB(){
+		 	cout<<"Class B ";
+		 }
+	
+};
+class C:virtual public A{
+	public :
+		 void displayC(){
+		 	cout<<"Class C ";
+		 }
+	
+};
+class D:public C,public B{
+	public :
+		 void displayD(){
+		 	cout<<"Class D";
+		 }
+	
+};
+int main(){
+	
+	D d1;
+	d1.displayA();
+	d1.displayB();
+	d1.displayC();
+	d1.displayD();
+	
+}
+//4
+#include<iostream>
+using namespace std;
+
+class Hotel{
+	private :
+		int Hotel_Number;
+		string Hotel_Name;  
+		string Hotel_Type;
+		float Hotel_Rating; 
+		string Hotel_Location;
+		
+	public :
+		
+		Hotel(int Hotel_Number,string Hotel_Name,string Hotel_Type,float Hotel_Rating,string Hotel_Location){
+			this->Hotel_Number=Hotel_Number;
+			this->Hotel_Name=Hotel_Name;
+			this->Hotel_Type=Hotel_Type;
+			this->Hotel_Rating=Hotel_Rating;
+			this->Hotel_Location=Hotel_Location;
+		}
+		void getData(){
+			cout<<"Hotel_Number : "<<Hotel_Number<<endl;
+			cout<<"Hotel_Name : "<<Hotel_Name<<endl;
+			cout<<"Hotel_Type : "<<Hotel_Type<<endl;
+			cout<<"Hotel_Rating : "<<Hotel_Rating;
+			cout<<"Hotel_Location : "<<Hotel_Location;
+		}
+};
+
+int main(){
+	Hotel h1;
+		int n;
+		int Hotel_Number;
+		string Hotel_Name;  
+		string Hotel_Type;
+		float Hotel_Rating; 
+		string Hotel_Location;
+		
+		cout<<"enter total hotel :";
+		cin>>n;
+		
+		for(int i=0;i<n;i++){
+			cout<<"Hotel_Number : ";
+			cin>>Hotel_Number;
+			cout<<"Hotel_Name : ";
+			cin>>Hotel_Name;
+			cout<<"Hotel_Type : ";
+			cin>>Hotel_Type;
+			cout<<"Hotel_Rating : ";
+			cin>>Hotel_Rating;
+			cout<<"Hotel_Location : ";
+			cin>>Hotel_Location;
+			h1.getData();
+		}
+		}
+
+
+//5
+#include<iostream>
+using namespace std;
+class demo{
+
+	public :
+		void displayData(int a){
+			cout<<"Class A"<<endl<<a;
+		}	
+};
+class demo2:public demo{
+	
+	public : 
+	void displayData(int a){
+		cout<<"Class B"<<endl<<a;
+	}
+
+};
+int main(){
+  
+  demo2 d1;
+  d1.displayData(10);
+}
